@@ -5,11 +5,11 @@ Motivated Computer Science student with hands-on experience in developing projec
 
 ### Education
 George Mason University
-Grade: Sophmore
-GPA:N/A
+- Grade: Sophmore
+- GPA:N/A
 
-### Socials
-Email: hoangg.ddo@gmail.com
-Linkedln: https://www.linkedin.com/in/hoang-do-/
-Github: https://github.com/hoanggddo
+# Socials
+- Email: hoangg.ddo@gmail.com
+- Linkedln: https://www.linkedin.com/in/hoang-do-/
+- Github: https://github.com/hoanggddo
 
