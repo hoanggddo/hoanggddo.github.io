@@ -11,6 +11,6 @@ GPA:N/A
 
 # Socials
 - Email: hoangg.ddo@gmail.com
-- Linkedln: https://www.linkedin.com/in/hoang-do-/
+- Linkedin: https://www.linkedin.com/in/hoang-do-/
 - Github: https://github.com/hoanggddo
 
