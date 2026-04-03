@@ -1,0 +1,17 @@
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import AppBPage from "./wii-portfolio-main"; // import App B's component
+
+function App() {
+  return (
+    <BrowserRouter>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/appb">Go to App B</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/appb/*" element={<AppBPage />} /> {/* renders App B */}
+      </Routes>
+    </BrowserRouter>
+  );
+}

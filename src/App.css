@@ -1,0 +1,1171 @@
+/* Custom fonts */
+@font-face {
+  font-family: f;
+  src: url(./assets/fonts/CentraNo2-Bold.ttf); 
+  font-weight: 700;
+}
+@font-face {
+  font-family: f;
+  src: url(./assets/fonts/CentraNo2-Medium.ttf); 
+  font-weight: 500;
+}
+@font-face {
+  font-family: f;
+  src: url(./assets/fonts/CentraNo2-Book.ttf); 
+  font-weight: 400;
+}
+/* Default CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 75px;
+}
+
+body {
+  font-weight:400;
+  overflow-x:hidden;
+  position:relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  
+  margin:0;
+  padding:0;
+  line-height:normal;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/************ Navbar Css ************/
+nav.navbar {
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition:  0.32s ease-in-out;
+}
+nav.navbar.scrolled {
+  padding: 0px 0;
+  background-color: #121212;
+}
+nav.navbar a.navbar-brand {
+    width: 9%;
+    margin-right: 100px;
+    height: 9%;     /* maintain aspect ratio */
+    display: block; 
+}
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+    opacity: 1;
+}
+span.navbar-text {
+    display: flex;
+    align-items: center;
+}
+.social-icon {
+    display: inline-block;
+    margin-left: 14px;
+}
+.social-icon a {
+    width: 42px;
+    height: 42px;
+    background: rgba(217, 217, 217, 0.1);
+    display: inline-flex;
+    border-radius: 50%;
+    margin-right: 6px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.social-icon a::before {
+    content: "";
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: scale(0);
+	transition: 0.3s ease-in-out;
+}
+.social-icon a:hover::before {
+    transform: scale(1);
+}
+.social-icon a img {
+	width: 40%;
+	z-index: 1;
+	transition: 0.3s ease-in-out;
+}
+.social-icon a:hover img {
+	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+.navbar-text button {
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 18px 34px;
+  font-size: 18px;
+  margin-left: 18px;
+	position: relative;
+	background-color: transparent;
+	transition: 0.3s ease-in-out;
+}
+.navbar-text button span {
+  z-index: 1;
+}
+.navbar-text button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.navbar-text button:hover {
+  color: #121212;
+}
+.navbar-text button:hover::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+nav.navbar .navbar-toggler:active,
+nav.navbar .navbar-toggler:focus {
+	outline: none;
+    box-shadow: none;
+}
+nav.navbar .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid #fff;
+  transition: all 300ms linear;
+  top: -2px;
+}
+nav.navbar .navbar-toggler-icon:focus {
+	border-bottom: 2px solid #fff;
+}
+nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:before {
+	width: 24px;
+	position: absolute;
+	height: 2px;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	content: '';
+	z-index: 2;
+	transition: all 300ms linear;
+}
+nav.navbar .navbar-toggler-icon:after {
+	top: 8px;
+}
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+	transform: rotate(45deg);
+	background-color: #fff;
+	height: 2px;
+}
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+	transform: translateY(8px) rotate(-45deg);
+	background-color: #fff;
+	height: 2px;
+}
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+	border-color: transparent;
+}
+
+.navbar-logo {
+    height: 3.125em;        /* matches nav text height */
+    width: 10.5em;           /* set a fixed width to crop visually */
+    object-fit: cover;      /* zoom into the image */
+    object-position: center; /* focus on center of logo */
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 0.5em;
+    position: relative;    /* allows moving it without affecting others */
+    top: 5px;    
+}
+/************ Banner Css ************/
+.banner {
+  margin-top: 0;
+  padding: 260px 0 100px 0;
+  background-image: url('./assets/img/banner-bg2.png');
+  /*background: linear-gradient(90deg, #000000 0%, #1E3A8A 60%, #FFFFFF 120%); */
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(0, 0, 255, 0.5) -5.91%, rgba(255, 255, 255, 0.5) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.banner h1 {
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+.banner p {
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+
+.glass-container {
+  background: linear-gradient(180deg, rgba(11, 26, 59, 0.8) 0%, rgba(21, 21, 21, 0.8) 100%);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 32px;
+  padding: 40px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 auto 50px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+.banner button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+.banner button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+.banner button:hover svg {
+  margin-left: 25px;
+}
+.banner img {
+  max-width: 100%;
+  height: 500px;
+}
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+
+/************ Skills Css ************/
+.skill {
+  padding: 0 0 50px 0;
+  position: relative;
+  background: linear-gradient(90deg, #000000 0%, #1E3A8A 60%, #FFFFFF 120%);
+}
+
+/* Carousel Box with dark gradient */
+.skill-box {
+  background: linear-gradient(180deg, #0B1A3B 0%, #151515 100%);
+  border-radius: 64px;
+  text-align: center;
+  padding: 40px 30px;
+  margin: 20px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+.skill-box:hover {
+  transform: translateY(-10px);
+}
+
+/* Carousel heading */
+.skill-box h3 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.glass-container {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+  backdrop-filter: blur(15px); /* frosted glass blur */
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 32px;
+  padding: 40px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 auto 50px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+/* Skill bubbles container */
+.skill-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Individual bubbles */
+.skill-bubble {
+  background: rgba(255, 255, 255, 0.1); /* green bubble */
+  color: white;
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 14px;
+  transition: transform 0.2s, background 0.2s;
+  cursor: default;
+}
+
+.skill-bubble:hover {
+  transform: scale(1.1);
+  background: #7FDBFF;
+}
+
+/* Main Heading */
+.skill h2 {
+  font-size: 45px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Paragraph text (if used) */
+.skill p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+}
+
+/* Carousel wrapper */
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Decorative background image */
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
+/************ Projects Css ************/
+.project {
+  padding: 80px 0;
+  position: relative;
+  background: linear-gradient(90deg, #000000 0%, #1E3A8A 60%, #FFFFFF 120%);
+}
+
+.project-body {
+  background: rgba(255, 255, 255, 0.08);  /* semi-transparent */
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);            /* frosted glass effect */
+  padding: 40px 30px;                     /* spacing inside */
+  margin-top: 30px;                        /* spacing from title */
+}
+
+.project-body:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+.project h2 {
+	font-size: 45px;
+	font-weight: 700;
+  text-align: center;
+}
+.project p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+  margin-bottom: 30px;
+}
+.project .nav.nav-pills {
+  width: 72%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: rgb(255 255 255 / 10%);
+  overflow: hidden;
+}
+.project .nav.nav-pills .nav-item {
+  width: 33.33333%;
+}
+.project .nav.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+.project .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #000000 0%, #1E3A8A 60%, #FFFFFF 120%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+.project .nav.nav-pills .nav-link.active::before {
+    width: 100% !important;
+}
+.project .nav.nav-pills .nav-link.active {
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+.nav-link#projects-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 55px 0px 0px 55px;
+}
+.nav-link#projects-tabs-tab-second {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.nav-link#projects-tabs-tab-third {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 55px 55px 0;
+}
+.project .container {
+  max-width: 1700px;  /* increase this if needed */
+}
+/* Main project card container */
+.proj-imgbx {
+  flex: 0 0 auto;
+  position: relative;
+  width: 100%;              /* fill column instead of fixed 519px */
+  max-width: 519px;         /* don't exceed your ideal size */
+  aspect-ratio: 519 / 380;  /* keeps perfect proportions */
+  margin: 0 auto 24px auto;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.project-body .row {
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* Image fits perfectly */
+.proj-imgbx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* safe since your images match ratio */
+  display: block;
+}
+
+/* Overlay gradient */
+.proj-imgbx::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #000000 0%, #1E3A8A 60%, #FFFFFF 120%);
+  opacity: 0.85;
+  transition: 0.4s ease-in-out;
+}
+
+/* Hover overlay expands fully */
+.proj-imgbx:hover::before {
+  height: 100%;
+}
+
+.proj-txtx {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;                  /* prevent overflow */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+/* Show text on hover */
+.proj-imgbx:hover .proj-txtx {
+  opacity: 1;
+  color: #fff;
+}
+
+/* Prevent text from overflowing */
+.proj-txtx h4 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+.proj-txtx span {
+  font-size: 14px;
+}
+.background-image-right {
+  top: 20%;
+  position: absolute;
+  bottom: 0;
+  width: 35%;
+  right: 0;
+  z-index: -4;
+}
+
+/* === NEW PROJECT CARDS === */
+
+.proj-card {
+  position: relative;
+  width: 100%;           /* fill column */
+  max-width: 100%;       /* don’t limit width */
+  height: 260px;
+  min-height: 320px; 
+
+  border-radius: 20px;
+  padding: 25px;
+
+  background: linear-gradient(180deg, #0B1A3B 0%, #151515 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover lift */
+.proj-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* FRONT (default view) */
+.proj-front {
+  position: absolute;
+  inset: 0;
+  padding: 20px;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* BACK (hover view) */
+.proj-back {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover swap */
+.proj-card:hover .proj-front {
+  opacity: 0;
+}
+
+.proj-card:hover .proj-back {
+  opacity: 1;
+}
+
+/* Typography */
+.proj-front h4 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.proj-front p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.proj-back h5 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.proj-back div {
+  margin-bottom: 15px;  /* space between bubbles and link */
+}
+/* GitHub link */
+.proj-back a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #000000 0%, #1E3A8A 60%, #FFFFFF 120%);
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.proj-back a:hover {
+  opacity: 0.8;
+}
+
+/* Tech stack bubbles */
+.tskill-bubble {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 50px;
+  font-size: 14px;
+  transition: transform 0.2s, background 0.2s;
+  cursor: default;
+}
+
+.tskill-bubble:hover {
+  transform: scale(1.1);
+  background: #7FDBFF;
+}
+
+/************ Contact Css ************/
+.contact {
+  background: linear-gradient(90deg, #000000 0%, #1E3A8A 60%, #FFFFFF 120%);
+  padding: 60px 0 200px 0;
+}
+.contact img {
+  width: 92%;
+}
+.contact h2 {
+	font-size: 45px;
+	font-weight: 700;
+  margin-bottom: 30px;
+}
+.contact form input, .contact form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  color: #fff;
+  margin: 0 0 8px 0;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+.contact form input:focus, .contact form textarea:focus {
+  background: rgba(255, 255, 255, 1);
+  color: #121212;
+}
+.contact form input::placeholder, .contact form textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
+  color: #121212;
+  opacity: 0.8;
+}
+.contact form button {
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  padding: 14px 48px;
+  font-size: 18px;
+  margin-top: 25px;
+  border-radius: 0;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.contact form button span {
+  z-index: 1;
+  position: relative;
+}
+.contact form button:hover {
+  color: #fff;
+}
+.contact form button::before {
+  content: "";
+  background: #121212;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+.contact form button:hover::before {
+  width: 100%;
+}
+
+/************ Footer Css ************/
+.footer {
+  position: relative;
+  padding: 60px 20px;
+  background-image: url('./assets/img/footer-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Semi-transparent dark + blue overlay */
+  background-color: rgba(0, 25, 75, 0.5); /* navy-ish blue tint */
+  background-blend-mode: overlay;          /* blend overlay with image */
+
+  color: #fff;
+}
+
+.footer img {
+  width: 26%;
+}
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #B8B8B8;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+
+/************ Experience Css ************/
+.experience {
+  padding: 100px 0;
+  background: linear-gradient(90deg, #000000 0%, #1E3A8A 60%, #FFFFFF 120%);
+  position: relative;
+}
+
+.experience h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Card styling */
+.experience-card {
+  background: linear-gradient(180deg, #0B1A3B 0%, #151515 100%) !important;
+  border-radius: 25px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.35s ease-in-out;
+  text-align: left;
+}
+
+/* Gradient glow hover (matches project section vibe) */
+.experience-card:hover {
+  transform: translateY(-8px);
+  border: 1px solid transparent;
+  background: linear-gradient(#fff, #151515) padding-box,
+              linear-gradient(90deg, #000000 0%, #1E3A8A 60%, #FFFFFF 120%) border-box;
+}
+
+/* Default title color */
+.experience-card .card-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+
+  /* Ensure proper text rendering if gradient is used in future */
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: initial;
+}
+
+/* Hover: change text to light blue */
+.experience-card:hover .card-title {
+  color: #7FDBFF; /* light blue */
+  
+  /* Reset gradient text properties */
+  background: none;
+  background-clip: border-box;        /* standard property */
+  -webkit-background-clip: border-box; /* for Safari/Chrome */
+  -webkit-text-fill-color: initial;    /* reset any gradient fill */
+}
+
+/* Container for tech bubbles */
+.tech-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Individual tech bubble */
+.tech-bubble {
+  display: flex;
+  padding: 6px 18px;
+  background: rgba(0, 123, 255, 0.2); /* light blue bubble, change as needed */
+  color: #fff; /* blue text */
+  border-radius: 50px; /* fully rounded */
+  font-size: 14px;
+  font-weight: 500;
+  cursor: default;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.tech-bubble:hover {
+  background: rgba(0, 123, 255, 0.4); /* slightly darker on hover */
+}
+
+/* Subtitle */
+.experience-card .card-subtitle {
+  font-size: 16px;
+  color: #B8B8B8 !important;
+  margin-bottom: 15px;
+}
+
+/* Bullet list */
+.experience-card ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.experience-card li {
+  font-size: 16px;
+  color: #d0d0d0;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+/* Custom bullet style */
+.experience-card li::marker {
+  color: #fff;
+}
+
+/* Subtle glow effect on hover */
+.experience-card:hover .card-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+
+  /* Ensure proper text rendering if gradient is used in future */
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: initial;
+}
+
+/* Hover: change text to light blue */
+.experience-card:hover .card-title {
+  color: #7FDBFF; /* light blue */
+  
+  /* Reset gradient text properties */
+  background: none;
+  background-clip: border-box;        /* standard property */
+  -webkit-background-clip: border-box; /* for Safari/Chrome */
+  -webkit-text-fill-color: initial;    /* reset any gradient fill */
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .experience {
+    padding: 60px 20px;
+  }
+
+  .experience h2 {
+    font-size: 32px;
+  }
+
+  .experience-card {
+    padding: 20px !important;
+  }
+}
+
+/************ Education Css ************/
+.education {
+  background: linear-gradient(90deg, #000000 0%, #1E3A8A 60%, #FFFFFF 120%);
+  padding: 80px 0 120px 0;
+}
+
+/* Inner card (glass look like contact inputs) */
+.education .card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 30px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Title */
+.education h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  
+}
+
+/* Container for bubbles */
+.course-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Individual course bubble */
+.course-bubble {
+  display: flex;
+  padding: 6px 18px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 50px; /* makes it fully rounded */
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+  cursor: default;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  justify-content: center;  /* <-- center horizontally */
+  align-items: center; 
+}
+.education .col-md-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center all child content */
+  text-align: center;  /* center text inside bubbles and paragraphs */
+}
+/* Certificate card */
+.cert-card { 
+  width: 360px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border-radius: 24px;        /* more curvy edges */
+  border: 2px solid #000;     /* black outline */
+  overflow: hidden;            /* ensure corners stay rounded */
+  background: #fff;            /* optional: white background */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
+  border-radius: 24px;
+}
+
+/* Image wrapper */
+.cert-img-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 24px 24px 0 0;
+}
+
+.cert-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+
+  image-rendering: auto;          /* default smoothing */
+  backface-visibility: hidden;    /* helps in some browsers */
+}
+
+.cert-img-wrapper:hover .cert-img {
+  transform: scale(1.05);
+  border-radius: 20px; /* adjust curve amount */
+}
+
+/* Text at bottom */
+.cert-text {
+  padding: 4px 6px;
+  text-align: center;
+  font-size: 10 px;
+  line-height: 1.1;
+  color: #fff;
+}
+.cert-text h6 {
+  margin: 2px 0;
+  font-size: 20px;
+}
+.cert-text p {
+  margin: 2px 0;
+  font-size: 0.7rem;
+  color: #fff;
+}
+.cert-text span {
+  font-size: 0.65rem;
+  color: #fff;
+}
+
+/* Carousel arrows */
+.cert-carousel .carousel-control-prev {
+  left: -50px; /* move 50px left */
+  width: 40px;
+  opacity: 0.8;
+}
+
+.cert-carousel .carousel-control-next {
+  right: -50px; /* move 50px right */
+  width: 40px;
+  opacity: 0.8;
+}
+
+.cert-carousel .carousel-control-prev:hover,
+.cert-carousel .carousel-control-next:hover {
+  opacity: 1;
+}
+/************ Tabs (cleaned up) ************/
+.education .nav.nav-pills {
+  width: fit-content;
+  margin: 0 auto 30px auto;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.education .nav.nav-pills .nav-link {
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+
+/* Active tab (simple + clean instead of weird borders) */
+.education .nav.nav-pills .nav-link.active {
+  background: #fff;
+  color: #121212;
+}
+
+/* Remove old borders causing weird look */
+.education .nav-link,
+.education .nav-link:first-child,
+.education .nav-link:last-child {
+  border: none !important;
+}
+
+/************ Content ************/
+.education h4 {
+  color: #fff; 
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.education p {
+  color: #e0e0e0;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+/* Item styling */
+.education .col-md-12 {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.education .col-md-12:hover {
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+/************ Responsive ************/
+@media (max-width: 768px) {
+  .education {
+    padding: 60px 20px;
+  }
+
+  .education h2 {
+    color: #fff; 
+    font-size: 30px;
+  }
+}

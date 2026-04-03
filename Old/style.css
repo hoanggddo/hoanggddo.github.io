@@ -1,0 +1,55 @@
+/* Add an Alice Blue background color to the top navigation */
+.navbar {
+  background-color: #4467CA;  /* Blue */
+  overflow: hidden;
+  position: fixed;            /* Fix the navbar to the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  left: 0;
+  display: flex;
+  justify-content: flex-end; /* Push links to the right */
+  padding-right: 20px;       /* Optional: spacing from edge */
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  color: black;              /* Black text for contrast */
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd;    /* Light gray background */
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: #04AA6D; /* Green */
+  color: white;
+}
+
+/* Style for research image */
+research-image {
+  border: 10px solid black;
+  border-radius: 10px;
+  width: 600px;
+  height: auto;
+  display: block;
+  margin: 10px auto; /* Center the images */
+}
+
+/* Text for research section */
+.research-text {
+  text-align: justify;
+}
+
+/* Utility spacing class */
+.spaced {
+  margin-bottom: 20px;
+}
