@@ -429,6 +429,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+
+
 @media (max-width: 1024px) {
   .skill-box, .proj-card {
     padding: 20px;
@@ -442,6 +444,34 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .skill-bubble, .tskill-bubble {
     font-size: 12px;
     padding: 4px 10px;
+  }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .skill-box {
+    padding: 25px;               /* slightly smaller padding */
+    height: 240px;               /* reduce height */
+  }
+
+  .skill-box h3 {
+    font-size: 22px;             /* smaller heading */
+    margin-bottom: 0.8rem;
+  }
+
+  .skill-bubble {
+    font-size: 12px;             /* slightly smaller bubble text */
+    padding: 5px 10px;           /* reduce bubble padding */
+  }
+
+  .skill h2 {
+    font-size: 38px;             /* main heading slightly smaller */
+    margin-bottom: 40px;
+  }
+
+  .skill p {
+    font-size: 16px;             /* paragraph slightly smaller */
+    margin-bottom: 60px;
   }
 }
 /************ Projects Css ************/
