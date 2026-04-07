@@ -337,16 +337,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Carousel Box with dark gradient */
 .skill-box {
   background: linear-gradient(180deg, #0B1A3B 0%, #151515 100%);
-  border-radius: 64px;
+  border-radius: 2rem;
   text-align: center;
-  padding: 40px 30px;
-  margin: 20px;
-  height: 280px;
+  padding: clamp(20px, 3vw, 40px);   /* responsive padding */
+  margin: 1rem;
+  height: clamp(220px, 25vw, 280px);  /* responsive height */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.6rem 1.8rem rgba(0, 0, 0, 0.4);
   transition: transform 0.3s;
 }
 
@@ -356,9 +356,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Carousel heading */
 .skill-box h3 {
-  font-size: 28px;
+  font-size: clamp(20px, 2vw, 28px);  /* responsive heading */
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 .glass-container {
   background: rgba(255, 255, 255, 0.1); /* semi-transparent */
@@ -382,13 +382,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Individual bubbles */
 .skill-bubble {
-  background: rgba(255, 255, 255, 0.1); /* green bubble */
+  background: rgba(255, 255, 255, 0.1);
   color: white;
-  padding: 8px 14px;
+  padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 14px);
   border-radius: 50px;
-  font-size: 14px;
+  font-size: clamp(10px, 1.2vw, 14px);  /* responsive font */
   transition: transform 0.2s, background 0.2s;
-  cursor: default;
 }
 
 .skill-bubble:hover {
@@ -428,6 +427,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   width: 40%;
   z-index: -4;
+}
+
+@media (max-width: 1024px) {
+  .skill-box, .proj-card {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .skill-box h3, .proj-front h4 {
+    font-size: 20px;
+  }
+
+  .skill-bubble, .tskill-bubble {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
 }
 /************ Projects Css ************/
 .project {
@@ -603,21 +618,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-card {
   position: relative;
-  width: 100%;           /* fill column */
-  max-width: 100%;       /* don’t limit width */
-  height: 260px;
-  min-height: 320px; 
-
-  border-radius: 20px;
-  padding: 25px;
-
+  width: 100%;
+  max-width: 100%;
+  min-height: clamp(260px, 25vw, 320px);
+  padding: clamp(15px, 2vw, 25px);
+  border-radius: 1.25rem;
   background: linear-gradient(180deg, #0B1A3B 0%, #151515 100%);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
-
   overflow: hidden;
   cursor: pointer;
-
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -669,15 +679,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Typography */
 .proj-front h4 {
-  font-size: 35px;
+  font-size: clamp(22px, 2vw, 35px);
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
 }
 
 .proj-front p {
-  font-size: 16px;
+  font-size: clamp(12px, 1.5vw, 16px);
+  line-height: 1.4;
   color: #ccc;
-  line-height: 1.5;
+  word-wrap: break-word;
 }
 
 .proj-back h5 {
@@ -707,10 +719,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-block;
   background: rgba(255, 255, 255, 0.15);
   color: #fff;
-  padding: 8px 16px;
+  padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
   margin: 5px;
   border-radius: 50px;
-  font-size: 14px;
+  font-size: clamp(10px, 1vw, 14px);
   transition: transform 0.2s, background 0.2s;
   cursor: default;
 }
@@ -1099,13 +1111,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .cert-carousel .carousel-control-next:hover {
   opacity: 1;
 }
-/************ Tabs (cleaned up) ************/
+/************ Tabs (responsive) ************/
 .education .nav.nav-pills {
+  display: flex;                 /* align tabs horizontally by default */
   width: fit-content;
   margin: 0 auto 30px auto;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 50px;
   padding: 5px;
+  flex-wrap: nowrap;             /* prevent wrapping on desktop */
+  justify-content: center;       /* center horizontally */
 }
 
 .education .nav.nav-pills .nav-link {
@@ -1114,9 +1129,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 50px;
   font-weight: 500;
   transition: 0.3s ease-in-out;
+  text-align: center;            /* center text */
 }
 
-/* Active tab (simple + clean instead of weird borders) */
+/* Active tab styling */
 .education .nav.nav-pills .nav-link.active {
   background: #fff;
   color: #121212;
@@ -1127,6 +1143,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .education .nav-link:first-child,
 .education .nav-link:last-child {
   border: none !important;
+}
+
+/* === MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
+  .education .nav.nav-pills {
+    flex-direction: column;       /* stack tabs vertically */
+    width: 90%;                   /* nearly full width */
+    padding: 10px;
+    border-radius: 25px;
+  }
+
+  .education .nav.nav-pills .nav-link {
+    width: 100%;                  /* full width for each tab */
+    margin-bottom: 10px;          /* space between tabs */
+    padding: 12px 20px;           /* slightly bigger tap area */
+  }
+
+  .education .nav.nav-pills .nav-link:last-child {
+    margin-bottom: 0;             /* remove extra margin on last tab */
+  }
 }
 
 /************ Content ************/
