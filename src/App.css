@@ -327,6 +327,32 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
+.pfp-wrapper {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden; /* THIS forces circle clipping */
+  border: 4px solid #666;
+  box-shadow: 0 0 15px #666;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.pfp {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pfp:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;

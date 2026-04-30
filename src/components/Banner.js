@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap"
 import {ArrowRightCircle} from 'react-bootstrap-icons';
 import headerImg from '../assets/img/header-img.png';
+import pfpPic from '../assets/img/profile-pic.png';
 
 export const Banner = () => {
     const toRotate = [ "Software Engineer", "Web Developer", "Tech Enthusiast" ];
@@ -54,7 +55,9 @@ export const Banner = () => {
                         </div>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Header Img"/>
+                        <div className="pfp-wrapper">
+                            <img className="pfp" src={pfpPic} alt="Profile Picture" />
+                        </div>
                     </Col>
                 </Row>
             </Container>
