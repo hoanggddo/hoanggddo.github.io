@@ -10,9 +10,9 @@ export const Experience = () => {
       details: [
         "Designed a multimodal AI model combining CNNs for lesion images and transformer-based NLP for symptom descriptions, improving classification accuracy by 15% across diverse skin tones.",
         "Led weekly Agile team meetings and organized 20+ project milestones, accelerating development and improving workflow efficiency.",
-        "Built a MatViT-based image preprocessing pipeline, enhancing data quality and reducing preprocessing time by 30%."
+        "Built a MaxViT-based image preprocessing pipeline, enhancing data quality and reducing preprocessing time by 30%."
       ],
-      tech: ["PyTorch", "CNNs", "Transfer Learning", "NLP", "Agile"]
+      tech: ["PyTorch", "NumPy", "Pandas", "Scikit-learn", "Agile", "MaxViT", "Google Colab"]
     },
     {
       title: "Admissions Technical Worker",
@@ -23,7 +23,7 @@ export const Experience = () => {
         "Conducted data audits that reduced processing errors by 30% within two months.",
         "Coordinated across departments to maintain consistent workflow and timely processing of applications."
       ],
-      tech: ["Microsoft Excel", "Data Analysis", "Process Improvement", "Collaboration"]
+      tech: ["Microsoft Excel", "Data Analysis", "WebXtender", "Collaboration", "Ellucian Banner", "Microsoft Teams", "SharePoint"]
     },
     {
       title: "Math 125 Learning Assistant",

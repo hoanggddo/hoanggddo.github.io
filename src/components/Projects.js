@@ -9,7 +9,7 @@ export const Projects = () => {
       title: "Rumi Press",
       description:
         "Developed a full-stack Django app to streamline book distribution workflows. Includes book/category management, expense tracking, search, and reporting dashboards for data visualization.",
-      techStack: "Django, PostgreSQL, Bootstrap, Render, Python, HTML/CSS",
+      techStack: "Django, PostgreSQL, Bootstrap, Render, Neon, Github Actions, Python, HTML/CSS",
       link: "https://github.com/hoanggddo/rumi_press",
     },
     {
