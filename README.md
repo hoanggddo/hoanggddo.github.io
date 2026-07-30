@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Hoang Do — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio site showcasing my projects, technical skills, and background as a Computer Science student at George Mason University.
 
-## Available Scripts
+**🔗 Live site:** [hoanggddo.github.io](https://hoanggddo.github.io)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I'm a Computer Science student at George Mason University's Honors College with hands-on experience in full-stack development, applied AI/ML, and cybersecurity. My work ranges from building AI-powered recommendation systems to automating compliance workflows for the Federal Aviation Administration. This site is where I collect that work in one place.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Featured Projects
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **[AI Laptop Recommendation System](https://github.com/hoanggddo/ai-laptop-recommendation-system)** — Hybrid recommendation engine combining feature-based filtering with PyTorch embeddings, deployed on Streamlit.
+- **[Rumi Press Book Distribution System](https://github.com/hoanggddo/rumi_press)** — Full-stack Django app replacing spreadsheet-based workflows for book distribution, deployed live on Render.
+- **[SOC Home Lab](https://github.com/hoanggddo/SOC-Home-Lab)** — Security operations lab integrating Wazuh, TheHive, and Shuffle for automated event monitoring, alerting, and incident response.
+- **[PCAP Network Mapper](https://github.com/hoanggddo/Network-Packet-Tracking)** — Desktop tool that parses packet capture files and visualizes network traffic as an interactive graph, with GeoIP resolution.
+- **[Vietnamese Quiz Application](https://github.com/hoanggddo/Quiz-Application)** — Java-based quiz app with CRUD operations, score tracking, and category management.
 
-### `npm run build`
+See the [projects section](https://hoanggddo.github.io) on the live site for the full list with descriptions and links.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technical Skills
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Languages:** Python, Java, JavaScript, HTML, CSS, SQL, C, R
+- **Frameworks/Libraries:** React, Django, PyTorch, Pandas, NumPy, Scikit-learn
+- **Tools:** Git, GitHub, Docker, CI/CD pipelines, Azure, Wireshark
+- **Security:** Wazuh, TheHive, Shuffle (SOAR), packet analysis
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Built With
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React (bootstrapped with [Create React App](https://github.com/facebook/create-react-app))
+- HTML / CSS / JavaScript
+- Deployed via GitHub Pages
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Local Development
 
-## Learn More
+Clone the repo and install dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone https://github.com/hoanggddo/hoanggddo.github.io.git
+cd hoanggddo.github.io
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run the app locally:
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page reloads automatically as you make changes.
 
-### Analyzing the Bundle Size
+Build for production:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm run build
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Deployment
 
-### Advanced Configuration
+This site is deployed via **GitHub Pages**, served directly from this repository at [hoanggddo.github.io](https://hoanggddo.github.io).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Email:** hoangg.ddo@gmail.com
+- **LinkedIn:** [linkedin.com/in/hoang-do](https://www.linkedin.com/in/hoang-do-/)
+- **GitHub:** [github.com/hoanggddo](https://github.com/hoanggddo)
